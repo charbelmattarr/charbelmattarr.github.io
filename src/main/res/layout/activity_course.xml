@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.attendancesystem.CourseActivity">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context="com.example.takeattendance2.Courses"
+            android:orientation="vertical"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="25dp"
+                android:text="My Courses"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="AddFieldToAddCourse"
+                android:text="Create new Course"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Edit"
+                    android:text="edit Course"
+                    />
+                <Button android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Delete"
+                    android:text="delete Course"/>
+                <Button android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/viewMeeting"
+                    android:text="Meeting"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/selectedCourse"
+                android:text=""
+                android:gravity="center"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:id="@+id/highlightCourse">
+                <TextView
+                    android:id="@+id/TextViewName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="25dp"
+                    />
+                <TextView
+                    android:id="@+id/TextViewSum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="25dp"
+                    />
+            </LinearLayout>
+
+            <ListView
+
+                android:id="@+id/listview2"
+                android:layout_width="match_parent"
+                android:layout_height="109dp"
+                android:choiceMode="singleChoice"
+                android:clickable="true"
+                android:divider="@color/black"
+                android:drawSelectorOnTop="true"
+                android:focusable="true"
+                android:footerDividersEnabled="true"
+                android:nestedScrollingEnabled="true"
+                android:scrollbars="vertical"
+                android:verticalScrollbarPosition="right"
+
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scrollbars="vertical"
+                android:nestedScrollingEnabled="true"
+                >
+
+            </RelativeLayout>
+            <TableLayout
+                android:id="@+id/TableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible">
+
+                <TableRow>
+                    <TextView
+                        android:text="Course Name: "
+                        />
+                    <EditText
+                        android:id="@+id/courseName"
+                        android:hint="Math"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="Course summary: "
+                        />
+                    <EditText
+                        android:id="@+id/course_Summary"
+                        android:inputType="text"
+                        android:hint="in this course we..."/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="Course category: "
+                        />
+                    <EditText
+                        android:id="@+id/course_category"
+                        android:hint="algebra"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="Course chapter number: "
+                        />
+                    <EditText
+                        android:id="@+id/chapterNumber"
+                        android:hint="10"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="pick a schedule: "
+                        />
+
+
+                    <LinearLayout android:orientation="vertical"
+                        android:layout_height="wrap_content"
+
+                        android:layout_width="wrap_content">
+                        <RadioGroup
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            >
+
+                            <RadioButton
+                                android:id="@+id/fall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="fall">
+
+                            </RadioButton>
+                            <RadioButton
+                                android:id="@+id/summer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="summer">
+
+                            </RadioButton>
+
+                            <RadioButton
+                                android:id="@+id/spring"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="spring">
+
+                            </RadioButton>
+
+
+                        </RadioGroup>
+
+                        <RadioGroup
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            >
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2022"
+                                android:id="@+id/curYear">
+
+                            </RadioButton>
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2023"
+                                android:id="@+id/nextYear">
+
+                            </RadioButton>
+
+
+
+
+                        </RadioGroup>
+                    </LinearLayout>
+
+
+
+                </TableRow>
+                <TableRow>
+                    <Button
+                        android:id="@+id/SaveCourse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Save Course"
+                        android:layout_column="1"/>
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>

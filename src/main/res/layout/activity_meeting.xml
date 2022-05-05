@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.attendancesystem.StudentMeetingActivity"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    android:scrollbars="vertical"
+    android:nestedScrollingEnabled="true"
+    android:scrollIndicators="right"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="25dp"
+        android:text="My Meetings"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="AddFieldToAddMeeting"
+        android:text="Create new Meeting"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/EditMeeting"
+            android:text="edit Meeting"
+            />
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/DeleteMeeting"
+            android:text="delete Meeting"/>
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/viewAttendance"
+            android:text="takeAttendance"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/selectedMeeting"
+        android:text=""
+        android:gravity="center"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/TextViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="25dp"
+        />
+    <ListView
+        android:focusable="true"
+        android:id="@+id/listview3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:nestedScrollingEnabled="true"
+        android:scrollbars="vertical"
+        android:divider="@color/black"
+        android:drawSelectorOnTop="true"
+        android:choiceMode="singleChoice"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:scrollbars="vertical"
+        android:nestedScrollingEnabled="true"
+        >
+
+    </RelativeLayout>
+    <TableLayout
+        android:id="@+id/TableLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible">
+
+        <TableRow>
+            <TextView
+                android:text="Meeting date: "
+                />
+            <EditText
+                android:id="@+id/meetingdate"
+                android:inputType="date"
+                android:hint="the date the meeting will/had happen/ed"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Meeting duration: "
+                />
+            <EditText
+                android:id="@+id/meeting_duration"
+                android:inputType="datetime"
+                android:hint="2hr20min"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="presence hour: "
+                />
+            <EditText
+                android:id="@+id/presence_hour"
+                android:inputType="datetime"
+                android:hint="2hr20min"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="meeting subject "
+                />
+            <EditText
+                android:id="@+id/meetingSubject"
+                android:hint="chapter1"/>
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:id="@+id/SaveMeeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save Meeting"
+                android:layout_column="1"/>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
