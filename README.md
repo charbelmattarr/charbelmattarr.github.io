@@ -1,2 +1,2 @@
 # charbelmattarr.github.io
-website for every one
+Android App for schools can help to take the attendance of the students and Teachers. 
